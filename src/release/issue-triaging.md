@@ -110,6 +110,7 @@ There are many different labels that can be applied to issues.
   There are also some other `I-*` labels that don't really fit into this. For triaging, focus on `I-ICE`, `I-crash`, `I-hang`, `I-slow`, `I-heavy`, `I-compiletime` and `I-unsound`.
 - [`P-*`]: Priority labels. Applied using the [compiler prioritization procedure](../compiler/prioritization.md).
 - [`S-*`]: The status of an issue, for example `S-needs-repro`.
+- [`S-tracking-*`]: Tracks the status of [tracking issues].
 - [`E-*`]: Calls for participation[^3], for example to minimize an issue.
     - `E-mentor`: A mentor is available to help with the issue, which makes for good first issues.
     - `E-needs-mcve`: This issue has a reproduction, but it is not minimal, it should be minimized.
@@ -118,6 +119,11 @@ There are many different labels that can be applied to issues.
     - `E-needs-design`: This issue will require some substantial design effort (exploration, prototyping, discussions, etc.).
     - `E-needs-test`: The issue has been fixed, but no test has been added for it. After someone adds a test, it can be closed.
     - `E-{easy,medium,hard}`: Someone has estimated how hard the issue is to fix. This can help with finding good first issues, but is [bound to be inaccurate](https://en.wikipedia.org/wiki/Curse_of_knowledge).
+- [`B-*`]: Issues which are blockers.
+- [`beta-*`]: Tracks changes which need to be [backported to beta].
+- [`stable-*`]: Tracks changes which need to be [backported to stable] (in in anticipation of a point release).
+- [relnotes]: Changes that should be documented in the release notes of the next release.
+- [metabug]: Tracks other bugs.
 
 See also section [Issue Triage](https://rustc-dev-guide.rust-lang.org/contributing.html#issue-triage) in the Rust Compiler Development Guide.
 
@@ -135,7 +141,16 @@ See also section [Issue Triage](https://rustc-dev-guide.rust-lang.org/contributi
 [`I-*`]: https://github.com/rust-lang/rust/labels?q=I-
 [`P-*`]: https://github.com/rust-lang/rust/labels?q=P-
 [`S-*`]: https://github.com/rust-lang/rust/labels?q=S-
+[`S-tracking-*`]: https://github.com/rust-lang/rust/labels?q=S-tracking
 [`E-*`]: https://github.com/rust-lang/rust/labels?q=E-
+[`B-*`]: https://github.com/rust-lang/rust/labels?q=B-
+[`beta-*`]: https://github.com/rust-lang/rust/labels?q=beta-
+[`stable-*`]: https://github.com/rust-lang/rust/labels?q=stable-
+[relnotes]: https://github.com/rust-lang/rust/labels/relnotes
+[metabug]: https://github.com/rust-lang/rust/labels/metabug
+[tracking issues]: https://github.com/rust-lang/rust/labels/C-tracking-issue
+[backported to beta]: backporting.md#beta-backporting-in-rust-langrust
+[backported to stable]: backporting.md#stable-backporting-in-rust-langrust
 [^1]: The `O` in `O-*` labels originally stood for *operating system (OS)*.
 [^2]: The `I` in `I-*` labels originally stood for *importance*. This makes the most sense for the `I-*-nominated` labels. For most `I-*` labels however it makes sense to interpret the `I` as *issue (kind)*.
 [^3]: The `E` in `E-*` labels stands for *experience*.
