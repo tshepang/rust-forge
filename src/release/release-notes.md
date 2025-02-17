@@ -8,7 +8,7 @@ releases.
 
 This step happens for `relnotes`, `relnotes-perf`, and `finished-final-comment-period`
 labels in rust-lang/rust and is managed by triagebot
-([implementation](https://github.com/rust-lang/triagebot/blob/38b904f010338e3847bf1eba651356985c6f1df1/src/handlers/relnotes.rs#L67)).
+([implementation](://github.com/rust-lang/triagebot/blob/38b904f010338e3847bf1eba651356985c6f1df1/src/handlers/relnotes.rs#L67)).
 
 Note that this step happens **on labeling**, not necessarily when the issue/PR
 is merged/closed. (FIXME: Should we move this to close time, to make it more
@@ -31,7 +31,7 @@ release team later.
 
 The release note text is automatically pulled in subsequent steps, and should use headers from [this list] if possible:
 
-[this list]: https://github.com/rust-lang/relnotes/blob/33e78d703a439c8721705b26e2613ec6dac0cb4f/src/main.rs#L444-L449
+[this list]: ://github.com/rust-lang/relnotes/blob/33e78d703a439c8721705b26e2613ec6dac0cb4f/src/main.rs#L444-L449
 
 * Compatibility Notes
 * Library
@@ -45,7 +45,7 @@ The release note text is automatically pulled in subsequent steps, and should us
 Stabilized APIs and Const Stabilized APIs should both be formatted roughly as follows:
 
 ```
-- [`std::ptr::null_mut`](https://doc.rust-lang.org/std/ptr/fn.null_mut.html)
+- [`std::ptr::null_mut`](://doc.rust-lang.org/std/ptr/fn.null_mut.html)
 ```
 
 Note that:
@@ -72,7 +72,7 @@ The goal here is mostly **catching obvious things**, not 100% exhaustiveness.
 It's generally OK if we miss something. If there's a consistent pattern, note
 it down for inclusion in triagebot's automatic issue filing.
 
-[Search]: https://github.com/rust-lang/rust/pulls?q=is%3Apr+milestone%3A1.85.0+is%3Amerged+-label%3Arelnotes+-label%3Arelnotes-perf+-label%3Afinished-final-comment-period
+[Search]: ://github.com/rust-lang/rust/pulls?q=is%3Apr+milestone%3A1.85.0+is%3Amerged+-label%3Arelnotes+-label%3Arelnotes-perf+-label%3Afinished-final-comment-period
 
 FIXME: This step may also need to include an attempt to milestone any
 **issues** that got tagged relnotes and closed -- those currently don't get
@@ -122,7 +122,7 @@ will also drop the item from the tool's output.
 
 ## Release team: Step 5: Publish relnotes PR
 
-See example from 1.84: https://github.com/rust-lang/rust/pull/134568
+See example from 1.84: <https://github.com/rust-lang/rust/pull/134568>
 
 Take the `relnotes.md` you have locally (typically without library
 stabilizations in today's world, you'll add them at a later point -- we want
@@ -184,4 +184,4 @@ The blog post author will then aim to post the blog post PR as soon as possible
 (typically 3-7 days out from the release, though we've had shorter turn arounds
 too), where it will get reviewed, edited, and finally merged on the release day.
 
-[relnotes]: https://github.com/rust-lang/relnotes
+[relnotes]: ://github.com/rust-lang/relnotes
